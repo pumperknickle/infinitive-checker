@@ -1,0 +1,19 @@
+The validator shall contain the property validatorConfiguration that is an instance of a Validation Configuration.
+
+The validator shall set the property validatorConfiguration with the Validation Configuration parameter when the setValidatorConfiguration function is called.
+
+The validator shall return the index ranges in the string parameter that exactly match any string in the forbiddenLexemes property in the validatorConfiguration property when the getForbiddenLexemes function is called.
+
+The validator shall return the index ranges in the string parameter that exactly match any string in the discouragedLexemes property in the validatorConfiguration property when the getDiscouragedLexemes function is called.
+
+The validator shall return the index ranges and corresponding Regular Expressions in the string parameter that exactly matches any Regular Expression in the forbiddenRegexes property in the validatorConfiguration property when the getForbiddenRegexMatches function is called.
+
+The validator shall return the index ranges and corresponding Regular Expressions in the string parameter that exactly matches any Regular Expression in the discouragedRegexes property in the validatorConfiguration property when the getDiscouragedRegexMatches function is called.
+
+The validator shall return the index ranges in the string parameter of all passive verbs when the getPOS function is called with the POS parameter equal to passive verbs.
+
+The validator shall return the index ranges in the string parameter of all adverbs when the getPOS function is called with the POS parameter equal to adverbs.
+
+The validator shall return the index ranges in the string parameter of all adjectives when the getPOS function is called with the POS parameter equal to adjectives.
+
+The validator shall return the index ranges in the string parameter of all infinitives when the getInfinitives function is called.

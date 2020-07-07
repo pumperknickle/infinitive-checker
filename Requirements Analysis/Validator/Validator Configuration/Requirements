@@ -1,0 +1,29 @@
+All Validator Configuration instances shall have the property called categories which contain a set of Trigger Word Categories instances.
+
+All Trigger Word Categories contain the property called name which is a string.
+
+All Trigger Word Categories contain the property called forbiddenLexemes which is a set of strings.
+
+All Trigger Word Categories contain the property called discouragedLexemes which is a set of strings.
+
+All Validator Configuration instances shall have the property called acceptedPassiveVerbs which is a set of strings.
+
+All Validator Configuration instances shall have the property called acceptedAdverbs which is a set of strings.
+
+All Validator Configuration instances shall have the property called acceptedAdjectives which is a set of strings.
+
+All Validator Configuration instances shall have the property called acceptedInfinitives which is a set of strings.
+
+All Validator Configuration instances shall return the JSON representation string when the toString function is called.
+
+When the decodeJSON function is called, The decoded Validator Configuration instance shall be returned given the JSON representation string parameter.
+
+All Validator Configuration instances should return the description of the INCOSE rule given the category and the matched trigger word.
+
+All Validator Configuration instances should return all categories where the forbiddenLexemes property contains the string parameter when the forbiddenMatches function is called.
+
+All Validator Configuration instances should return all categories where the discouragedLexemes property contains the string parameter when the discouragedMatches function is called.
+
+The property allForbiddenLexemes shall be derived as the union of the forbiddenLexemes property in all Trigger Word Categories.
+
+The property allDiscouragedLexemes shall be derived as the union of the discouragedLexemes property in all Trigger Word Categories.

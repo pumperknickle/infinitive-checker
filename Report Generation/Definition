@@ -1,0 +1,2 @@
+The report generation module uses the Requirements Analysis (RA) Module to create a report on a set of requirements detailing the sources of ambiguity and the reason for ambiguity. Furthermore, it provides metrics on the overall quality of a set of requirements which can be configured to emphasize or ignore certain indicators.
+
