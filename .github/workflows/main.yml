@@ -25,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r RQTAPI/requirements.txt
+        pip install -r /RQTAPI/requirements.txt
         
     - name: Install Language Model
       run: |
@@ -33,7 +33,7 @@ jobs:
         
     - name: Run RQT
       run: |
-        python RQTAPI/ReportGenerator.py "$PWD"
+        python /RQTAPI/ReportGenerator.py "$PWD"
     
     - name: Upload Report
       uses: actions/upload-artifact@v1
