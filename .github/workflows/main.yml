@@ -35,7 +35,7 @@ jobs:
         
     - name: Run RQT
       run: |
-        python $GITHUB_WORKSPACE/RQTAPI/ReportGenerator.py "$PWD"
+        python $GITHUB_WORKSPACE/RQTAPI/ReportGenerator.py $GITHUB_WORKSPACE/Requirements\ Quality\ Toolkit
     
     - name: Upload Report
       uses: actions/upload-artifact@v1
