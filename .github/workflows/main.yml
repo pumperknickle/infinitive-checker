@@ -17,6 +17,11 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
         
+    - name: Checkout Target Repo
+      uses: actions/checkout@v2
+      with:
+        path: main
+        
     - name: Checkout RQT
       uses: actions/checkout@master
       with:
@@ -35,7 +40,7 @@ jobs:
         
     - name: Run RQT
       run: |
-        python $GITHUB_WORKSPACE/RQTAPI/ReportGenerator.py $GITHUB_WORKSPACE/Requirements\ Quality\ Toolkit
+        python $GITHUB_WORKSPACE/RQTAPI/ReportGenerator.py $GITHUB_WORKSPACE/main
     
     - name: Upload Report
       uses: actions/upload-artifact@v1
