@@ -21,7 +21,7 @@ jobs:
       uses: actions/checkout@master
       with:
         repository: pumperknickle/RQTAPI
-        path: /home/runner/work/infinitive-checker/infinitive-checker/RQTAPI
+        path: /RQTAPI
         
     - name: Install dependencies
       run: |
@@ -34,7 +34,7 @@ jobs:
         
     - name: Run RQT
       run: |
-        python /RQTAPI/ReportGenerator.py "$PWD"
+        python $GITHUB_WORKSPACE/RQTAPI/ReportGenerator.py "$PWD"
     
     - name: Upload Report
       uses: actions/upload-artifact@v1
