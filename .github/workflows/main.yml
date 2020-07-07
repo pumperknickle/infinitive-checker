@@ -21,6 +21,7 @@ jobs:
       uses: actions/checkout@master
       with:
         repository: pumperknickle/RQTAPI
+        path: /RQTAPI
         
     - name: Install dependencies
       run: |
