@@ -1,4 +1,4 @@
-name: batch Checker
+name: batch checker
 
 on: [push]
 
@@ -36,6 +36,7 @@ jobs:
         pip install rake-nltk
         pip install pygtrie
         pip install abbreviations
+        pip install quantulum3
         
     - name: Install Language Model
       run: |
