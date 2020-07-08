@@ -37,6 +37,7 @@ jobs:
         pip install pygtrie
         pip install abbreviations
         pip install quantulum3
+        pip install jsonschema
         
     - name: Install Language Model
       run: |
