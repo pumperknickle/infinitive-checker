@@ -1,0 +1,52 @@
+name: batch Checker
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7, 3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+        
+    - name: Checkout Target Repo
+      uses: actions/checkout@v2
+      with:
+        path: main
+        
+    - name: Checkout RQT
+      uses: actions/checkout@master
+      with:
+        repository: pumperknickle/batchchecker
+        path: batchchecker
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install spacy
+        pip install python-docx
+        pip install rake-nltk
+        pip install pygtrie
+        pip install abbreviations
+        
+    - name: Install Language Model
+      run: |
+        python -m spacy download en_core_web_sm
+        
+    - name: Run RQT
+      run: |
+        python $GITHUB_WORKSPACE/batchchecker/BatchChecker.py $GITHUB_WORKSPACE/main
+    
+    - name: Upload Report
+      uses: actions/upload-artifact@v1
+      with:
+        name: infinitive report
+        path: RQT_report.html
