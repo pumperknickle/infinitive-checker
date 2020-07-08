@@ -1,4 +1,4 @@
-RQT is a set of standardized data models, natural language analysis tools, and integrated user interfaces that provide comprehensive facilities to engineers for requirements development. RQT will analyze requirements and sets of requirements through four metrics: quality, consistency, completeness, and similarity through natural language and statistical models. This feedback to the requirements engineer will display directly through the compatible editor or through static reports generated. RQT's main goal is to accelerate requirements development while also increasing the quality of the developed requirements.
+RQT is a set of standardized data models, natural language analysis tools, and integrated user interfaces that provide comprehensive facilities to engineers for requirements development. RQT will analyze requirements and sets of requirements through four metrics: quality, consistency, completeness, and similarity through natural language and statistical models. This feedback to the requirements engineer will display directly through the compatible editor or through static reports generated.
 
 A TWC can be used for detecting.
 
